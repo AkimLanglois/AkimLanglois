@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="login.js"></script>
+    <link href="css/BGandNav.css" rel="stylesheet" type="text/css" />
+    <link href="css/login.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="css/images/pooIcon.png" />
+    <meta charset="UTF-8" />
+    <title>Trump's TakeOver</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <header title=" ">
+      <div class="header" role="heading">
+        <div class="brownBox">
+          <img
+            src="css/images/trump.png"
+            id="img"
+            alt="trump face logo"
+            class="home"
+          />
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <div>
+        <nav id="nav">
+          <a href="javascript:delay('histoire.html')" class="nonActiveNav"
+            >HISTOIRE</a
+          >
+          <a href="javascript:delay('login.html')" class="activeNav">LOGIN</a>
+          <a href="javascript:delay('index.html')" class="nonActiveNav"
+            >JOUER</a
+          >
+          <a href="javascript:delay('faq.html')" class="nonActiveNav"
+            >COMMENT JOUER</a
+          >
+          <a href="javascript:delay('forum.html')" class="nonActiveNav"
+            >FORUM</a
+          >
+          <a href="javascript:delay('leaderboard.html')" class="nonActiveNav"
+            >TABLEAU DES SCORES</a
+          >
+        </nav>
+      </div>
+
+      <div class="divParagraphe" id="divLogin">
+        <form class="formulaire" action="@" autocomplete="off">
+          <label for="fname">Identifiant:</label> &emsp;
+          <input
+            type="text"
+            class="textBox"
+            id="fname"
+            name="fname"
+          /><br /><br />
+          <label for="lname">Mot de passe:</label>&nbsp;&nbsp;
+          <input
+            type="text"
+            class="textBox"
+            id="lname"
+            name="lname"
+          /><br /><br />
+          <input type="submit" class="button1" value="Connexion" />
+        </form>
+        <button class="button1" id="trigger_popup_fricc">Créer accompte</button>
+
+        <div class="popupBg">
+          <span class="helper"></span>
+          <div>
+            <div class="popupCloseButton">&times;</div>
+            <form class="formulaire" action="@" autocomplete="off">
+              <div class="divFormulaire">
+                <label for="fname">Identifiant:</label> &emsp;
+                <input
+                  type="text"
+                  class="textBox textBox2"
+                  id="fname2"
+                  name="fname"
+                /><br /><br />
+                <label for="lname">Adresse Email:</label>&nbsp;&nbsp;
+                <input
+                  type="text"
+                  class="textBox textBox2"
+                  id="lname2"
+                  name="lname"
+                /><br /><br />
+                <label for="fname">Mot de passe:</label> &emsp;
+                <input
+                  type="text"
+                  class="textBox textBox2"
+                  id="fname3"
+                  name="fname"
+                /><br /><br />
+                <label for="lname">Confirmer le mot de passe:</label
+                >&nbsp;&nbsp;
+                <input
+                  type="text"
+                  class="textBox textBox2"
+                  id="lname4"
+                  name="lname"
+                /><br /><br />
+              </div>
+              <input type="submit" class="button1" value="Créer" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer"></footer>
+  </body>
+</html>

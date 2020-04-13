@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+
+    <link href="css/BGandNav.css" rel="stylesheet" type="text/css" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+
+    <link rel="icon" href="css/images/pooIcon.png" />
+    <meta charset="UTF-8" />
+    <title>Trump's TakeOver</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <header title=" ">
+      <div class="header" role="heading">
+        <div class="brownBox">
+          <img
+            src="css/images/trump.png"
+            id="img"
+            alt="trump face logo"
+            class="home"
+          />
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <div>
+        <nav id="nav">
+          <a href="javascript:delay('histoire.html')" class="nonActiveNav"
+            >HISTOIRE</a
+          >
+          <a href="javascript:delay('login.html')" class="nonActiveNav"
+            >LOGIN</a
+          >
+          <a href="javascript:delay('index.html')" class="activeNav">JOUER</a>
+          <a href="javascript:delay('faq.html')" class="nonActiveNav"
+            >COMMENT JOUER</a
+          >
+          <a href="javascript:delay('forum.html')" class="nonActiveNav"
+            >FORUM</a
+          >
+          <a href="javascript:delay('leaderboard.html')" class="nonActiveNav"
+            >TABLEAU DES SCORES</a
+          >
+        </nav>
+      </div>
+      <div class="divJoueur" id="divJoueur">
+        <div class="statsJoueur">
+          <p>GUERRES</p>
+          <p>2/2</p>
+          <p>ARGENT</p>
+          <p>420$</p>
+          <p>PROFITABILITÉ</p>
+          <p>69</p>
+          <p>POPULARITÉ</p>
+          <p>42069%</p>
+        </div>
+        <div class="divImgJoueur">
+          <img src="css/images/grumpy.png" class="imgTableau" alt="" /><img
+            src="css/images/cash.png"
+            class="imgTableau"
+            alt=""
+          />
+        </div>
+        <div class="buttonJoueur">
+          <button id="trigger_popup_fricc">SHOP</button
+          ><button id="trigger_popup_fricc2">XP</button>
+        </div>
+      </div>
+      <div class="divTableau" id="divTableau">
+        <table class="tableau">
+          <thead>
+            <tr>
+              <th>GUERRES</th>
+              <th>PROFITS</th>
+              <th>POPULARITÉ</th>
+              <th>DURÉE</th>
+              <th>BONUS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>chine</td>
+              <td>420$</td>
+              <td>12%</td>
+              <td>4h20min</td>
+              <td>
+                <img src="css/images/journal.png" alt="" /><img
+                  src="css/images/journal.png"
+                  alt=""
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>chine</td>
+              <td>420$</td>
+              <td>12%</td>
+              <td>4h20min</td>
+              <td>
+                <img src="css/images/grumpy.png" alt="" /><img
+                  src="css/images/bomb.png"
+                  alt=""
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>chine</td>
+              <td>420$</td>
+              <td>12%</td>
+              <td>4h20min</td>
+              <td>
+                <img src="css/images/cash.png" alt="" /><img
+                  src="css/images/dogo.png"
+                  alt=""
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>chine</td>
+              <td>420$</td>
+              <td>12%</td>
+              <td>4h20min</td>
+              <td>
+                <img src="css/images/pepe.png" alt="" /><img
+                  src="css/images/grumpy.png"
+                  alt=""
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>chine</td>
+              <td>420$</td>
+              <td>12%</td>
+              <td>4h20min</td>
+              <td>
+                <img src="css/images/bomb.png" alt="" /><img
+                  src="css/images/dogo.png"
+                  alt=""
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="tableauButton">
+          <div>
+            <p>12h24min</p>
+            <button class="buttonPlay"></button
+            ><button class="buttonPause"></button>
+          </div>
+          <div class="divImgTableau">
+            <img src="css/images/bomb.png" class="imgTableau" alt="" /><img
+              src="css/images/dogo.png"
+              class="imgTableau"
+              alt=""
+            />
+          </div>
+          <div class="divButtonWar"><button>DÉCLARER UNE GUERRE</button></div>
+        </div>
+      </div>
+      <div class="divInventaire" id="divInventaire">
+        <img src="css/images/dogo.png" alt="pointNoir" /><img
+          src="css/images/grumpy.png"
+          alt="pointNoir"
+        /><img src="css/images/cash.png" alt="pointNoir" /><img
+          src="css/images/journal.png"
+          alt="pointNoir"
+        /><img src="css/images/pepe.png" alt="pointNoir" /><img
+          src="css/images/blackDot.png"
+          alt="pointNoir"
+        /><img src="css/images/blackDot.png" alt="pointNoir" /><img
+          src="css/images/blackDot.png"
+          alt="pointNoir"
+        />
+      </div>
+      <div class="divRessource" id="divRessource">
+        <div class="ressource1">
+          <p class="titre">OPINION PUBLIQUE</p>
+          <hr />
+          <div class="statsRessource">
+            <p>supporters</p>
+            <p>69</p>
+            <p>popularité</p>
+            <p>12%</p>
+          </div>
+          <hr />
+          <div class="progress"><div class="progressBar1"></div></div>
+          <button class="buttonRessource">TWEETER</button>
+        </div>
+
+        <div class="ressource2">
+          <p class="titre">COLLECTE D'INFOS</p>
+          <hr />
+          <div class="statsRessource">
+            <p>infos</p>
+            <p>666</p>
+            <p>opportunités d'affaires</p>
+            <p>12</p>
+          </div>
+          <hr />
+          <div class="progress"><div class="progressBar2"></div></div>
+          <button class="buttonRessource">ESPIONNER</button>
+        </div>
+
+        <div class="ressource3">
+          <p class="titre">RELATIONS MÉDIATIQUES</p>
+          <hr />
+          <div class="statsRessource">
+            <p>journalistes corrompus</p>
+            <p>123</p>
+            <p>critiques</p>
+            <p>123</p>
+          </div>
+          <hr />
+          <div class="progress"><div class="progressBar3"></div></div>
+          <button class="buttonRessource">CORROMPRE</button>
+        </div>
+
+        <div class="ressource4">
+          <p class="titre">POLITIQUES ÉTRANGÈRES</p>
+          <hr />
+          <div class="statsRessource">
+            <p>pays ennemis</p>
+            <p>2</p>
+            <p>niveau de désaccord</p>
+            <p>12%</p>
+          </div>
+          <hr />
+          <div class="progress"><div class="progressBar4"></div></div>
+          <button class="buttonRessource">PROVOQUER</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="popupBg">
+      <span class="helper"></span>
+
+      <div>
+        <div class="popupCloseButton">&times;</div>
+
+        <div class="divObjetShop">
+          <img src="css/images/journal96.png" alt="journal" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+          </p>
+          <button class="buttonBuyObjet">200$</button>
+        </div>
+        <hr />
+        <div class="divObjetShop">
+          <img src="css/images/money96.png" alt="journal" />
+          <p>
+            Lorem ipsum d
+          </p>
+          <button class="buttonBuyObjet">200$</button>
+        </div>
+        <hr />
+
+        <div class="divObjetShop">
+          <img src="css/images/bomb96.png" alt="journal" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+            temporibus, nostrum architecto illum nesciunt esse ipsum, ad odio
+            corporis a obcaecati error? Similique, minima nisi!
+          </p>
+          <button class="buttonBuyObjet">500$</button>
+        </div>
+        <hr />
+
+        <div class="divObjetShop">
+          <img src="css/images/dogo96.png" alt="journal" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+            temporibus, nostrum architecto illum nesciunt esse ipsum, ad odio
+            corporis a obcaecati error? Similique, minima nisi!
+          </p>
+          <button class="buttonBuyObjet">500$</button>
+        </div>
+        <hr />
+
+        <div class="divObjetShop">
+          <img src="css/images/pepe96.png" alt="journal" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+            temporibus, nostrum architecto illum nesciunt esse ipsum, ad odio
+            corporis a obcaecati error? Similique, minima nisi!
+          </p>
+          <button class="buttonBuyObjet">700$</button>
+        </div>
+        <hr />
+
+        <div class="divObjetShop">
+          <img src="css/images/grumpy96.png" alt="journal" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+            temporibus, nostrum architecto illum nesciunt esse ipsum, ad odio
+            corporis a obcaecati error? Similique, minima nisi!
+          </p>
+          <button class="buttonBuyObjet">1100$</button>
+        </div>
+        <hr />
+
+        <div class="divObjetShop">
+          <img src="css/images/journal96.png" alt="journal" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+            temporibus, nostrum architecto illum nesciunt esse ipsum, ad odio
+            corporis a obcaecati error? Similique, minima nisi!
+          </p>
+          <button class="buttonBuyObjet">1500$</button>
+        </div>
+        <hr />
+
+        <div class="divObjetShop">
+          <img src="css/images/journal96.png" alt="journal" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+            temporibus, nostrum architecto illum nesciunt esse ipsum, ad odio
+            corporis a obcaecati error? Similique, minima nisi!
+          </p>
+          <button class="buttonBuyObjet">2200$</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="popupBg2">
+      <!-- <span class="helper"></span> -->
+      <div class="positionTop">
+        <div class="popupCloseButton">&times;</div>
+        <div class="divXpRessource">
+          <div class="xpRes xpRes1">
+            <p>OPINION PUBLIQUE</p>
+            <br />
+            <div class="statsPopupXp">
+              <p>XP:</p>
+              <p>1/5</p>
+              <p>Points à dépenser:</p>
+              <p>1</p>
+            </div>
+          </div>
+          <div class="xpRes xpRes2">
+            <p>COLLECTE D'INFOS</p>
+            <br />
+            <div class="statsPopupXp">
+              <p>XP:</p>
+              <p>1/5</p>
+              <p>Points à dépenser:</p>
+              <p>1</p>
+            </div>
+          </div>
+          <div class="xpRes xpRes3">
+            <p>RELATIONS <br />MÉDIATIQUES</p>
+            <div class="statsPopupXp">
+              <p>XP:</p>
+              <p>1/5</p>
+              <p>Points à dépenser:</p>
+              <p>1</p>
+            </div>
+          </div>
+          <div class="xpRes xpRes4">
+            <p>POLITIQUES <br />ÉTRANGÈRES</p>
+            <div class="statsPopupXp">
+              <p>XP:</p>
+              <p>1/5</p>
+              <p>Points à dépenser:</p>
+              <p>1</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="positionBottom">
+        <div class="gridBottom">
+          <div class="divPtsXp bronzeBg">
+            <p class="fontSizeXpCost xpTierBg">0/5</p>
+            <p>
+              Lorem ipsum dolor sit amet.
+            </p>
+            <p class="fontSizeXpCost">Cout<br />1pt</p>
+            <button class="plus-button"></button>
+            <p class="fontSizeXpCost xpTierBg">0/5</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p class="fontSizeXpCost">Cout<br />2pt</p>
+            <button class="plus-button"></button>
+          </div>
+          <div class="divPtsXp bronzeBg">
+            <p class="fontSizeXpCost xpTierBg">0/5</p>
+            <p>
+              Lorem ipsum dolor sit amet.
+            </p>
+            <p class="fontSizeXpCost">Cout<br />1pt</p>
+            <button class="plus-button"></button>
+            <p class="fontSizeXpCost xpTierBg">0/5</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p class="fontSizeXpCost">Cout<br />2pt</p>
+            <button class="plus-button"></button>
+          </div>
+
+          <div class="divPtsXp silverBg">
+            <p class="fontSizeXpCost xpTierBg">0/5</p>
+            <p>
+              Lorem ipsum dolor sit amet.
+            </p>
+            <p class="fontSizeXpCost">Cout<br />1pt</p>
+            <button class="plus-button"></button>
+            <p class="fontSizeXpCost xpTierBg">0/5</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p class="fontSizeXpCost">Cout<br />2pt</p>
+            <button class="plus-button"></button>
+          </div>
+          <div class="divPtsXp silverBg">
+            <p class="fontSizeXpCost xpTierBg">0/5</p>
+            <p>
+              Lorem ipsum dolor sit amet.
+            </p>
+            <p class="fontSizeXpCost">Cout<br />1pt</p>
+            <button class="plus-button"></button>
+            <p class="fontSizeXpCost xpTierBg">0/5</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p class="fontSizeXpCost">Cout<br />2pt</p>
+            <button class="plus-button"></button>
+          </div>
+          <div class="divPtsXp goldBg">
+            <p class="fontSizeXpCost xpTierBg">0/5</p>
+            <p>
+              Lorem ipsum dolor sit amet.
+            </p>
+            <p class="fontSizeXpCost">Cout<br />1pt</p>
+            <button class="plus-button"></button>
+            <p class="fontSizeXpCost xpTierBg">0/5</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p class="fontSizeXpCost">Cout<br />2pt</p>
+            <button class="plus-button"></button>
+          </div>
+          <div class="divPtsXp goldBg">
+            <p class="fontSizeXpCost xpTierBg">0/5</p>
+            <p>
+              Lorem ipsum dolor sit amet.
+            </p>
+            <p class="fontSizeXpCost">Cout<br />1pt</p>
+            <button class="plus-button"></button>
+            <p class="fontSizeXpCost xpTierBg">0/5</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p class="fontSizeXpCost">Cout<br />2pt</p>
+            <button class="plus-button"></button>
+          </div>
+          <div class="divPtsXp platinumBg">
+            <p class="fontSizeXpCost xpTierBg">0/5</p>
+            <p>
+              Lorem ipsum dolor sit amet.
+            </p>
+            <p class="fontSizeXpCost">Cout<br />1pt</p>
+            <button class="plus-button"></button>
+            <p class="fontSizeXpCost xpTierBg">0/5</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p class="fontSizeXpCost">Cout<br />2pt</p>
+            <button class="plus-button"></button>
+          </div>
+          <div class="divPtsXp platinumBg">
+            <p class="fontSizeXpCost xpTierBg">0/5</p>
+            <p>
+              Lorem ipsum dolor sit amet.
+            </p>
+            <p class="fontSizeXpCost">Cout<br />1pt</p>
+            <button class="plus-button"></button>
+            <p class="fontSizeXpCost xpTierBg">0/5</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p class="fontSizeXpCost">Cout<br />2pt</p>
+            <button class="plus-button"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer"></footer>
+  </body>
+</html>
