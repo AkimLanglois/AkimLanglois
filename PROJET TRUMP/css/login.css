@@ -1,0 +1,96 @@
+div.divParagraphe {
+  height: 78%;
+  height: fit-content;
+  width: 100%;
+  padding: 90px 20px;
+}
+
+.loginOut {
+  height: 78%;
+  height: fit-content;
+  width: 100%;
+  padding: 90px 20px;
+  text-align: center;
+  overflow: auto;
+  border: 4px solid white;
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  font-family: "Courier New", Courier, monospace;
+  background-color: rgba(20, 20, 23, 0.85);
+  animation-name: gridAnimOut;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+}
+
+/* form.formulaire {
+  margin-top: 30px;
+} */
+
+button.button1 {
+  margin: 15px;
+}
+
+button.button1,
+input.button1 {
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 1);
+  background: #002868;
+  transition: 200ms;
+  border-radius: 10px;
+  border: 2px solid white;
+  color: white;
+  font-family: "courier new";
+  font-weight: bold;
+  font-size: 1.1em;
+  width: 20vw;
+  min-width: 120px;
+  padding: 4px;
+}
+
+button.button1:hover,
+input.button1:hover {
+  background: white;
+  color: black;
+  width: 20.5vw;
+  font-size: 1.125em;
+  box-shadow: 0 0 18px rgba(255, 255, 255);
+}
+
+input.textBox {
+  background-color: transparent;
+  font-family: "Courier New", Courier, monospace;
+  border-radius: 8px;
+  border: 1px solid white;
+  color: white;
+  padding: 4px 8px;
+  width: 40%;
+  text-decoration: none;
+  outline: none;
+}
+
+.divFormulaire {
+  display: grid;
+}
+
+.textBox.textBox2 {
+  width: 100%;
+}
+
+@media only screen and (max-width: 1050px) {
+  div.divParagraphe,
+  .loginOut {
+    width: 35%;
+  }
+
+  .loginOut {
+    animation: none;
+  }
+}
+@media only screen and (max-width: 710px) {
+  div.divParagraphe,
+  .loginOut {
+    width: 80%;
+    margin: 50px auto;
+  }
+}

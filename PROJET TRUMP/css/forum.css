@@ -1,0 +1,180 @@
+div.divParagraphe {
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  padding: 20px 20px 0 20px;
+}
+
+.divParagrapheOut {
+  text-align: center;
+  overflow: auto;
+  border: 4px solid white;
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  font-family: "Courier New", Courier, monospace;
+  background-color: rgba(20, 20, 23, 0.85);
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  padding: 20px 20px 0 20px;
+  animation-name: gridAnimOut;
+  animation-fill-mode: forwards;
+  animation-duration: 700ms;
+}
+
+form.formulaire {
+  margin: auto;
+  width: 90%;
+  height: 100%;
+  display: grid;
+  grid-auto-rows: 10fr 1fr;
+}
+
+.textBox {
+  resize: none;
+  padding: 5px;
+  border-radius: 10px;
+  margin: auto;
+  height: 80%;
+  width: 100%;
+}
+
+input.button1 {
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 1);
+  background: #002868;
+  transition: 200ms;
+  border-radius: 10px;
+  border: 2px solid white;
+  color: white;
+  font-family: "courier new";
+  font-weight: bold;
+  font-size: 0.9em;
+  width: 30%;
+  margin: auto;
+  margin-bottom: 30px;
+  padding: 7px;
+}
+
+input.button1:hover {
+  background: white;
+  color: black;
+  box-shadow: 0 0 18px rgba(255, 255, 255);
+}
+
+div.divForum {
+  animation-name: gridAnim;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  overflow: auto;
+  margin: 2em 0 60px 0;
+  grid-template-columns: 4fr 1fr;
+  grid-gap: 1em 0.2em;
+  padding: 0 1em;
+}
+
+.divForumOut {
+  text-align: center;
+  border: 4px solid white;
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  font-family: "Courier New", Courier, monospace;
+  background-color: rgba(20, 20, 23, 0.85);
+  animation-name: gridAnimOut;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  overflow: auto;
+  margin: 2em 0 60px 0;
+  grid-template-columns: 4fr 1fr;
+  grid-gap: 1em 0.2em;
+  padding: 0 1em;
+}
+
+div.divForum > div,
+div.divForumOut > div {
+  padding: 5px;
+  height: 50px;
+  border: 2px solid white;
+  overflow: auto;
+}
+
+div.divForum > div:first-child,
+div.divForum > div:nth-child(2),
+div.divForumOut > div:first-child,
+div.divForumOut > div:nth-child(2) {
+  margin-top: 1em;
+}
+
+div.divForum > div:last-child,
+div.divForum > div:nth-child(7),
+div.divForumOut > div:last-child,
+div.divForumOut > div:nth-child(7) {
+  margin-bottom: 1em;
+}
+
+div.divForum > div:nth-child(even),
+div.divForumOut > div:nth-child(even) {
+  border-radius: 0 10px 10px 0;
+}
+
+div.divForum > div:nth-child(odd),
+div.divForumOut > div:nth-child(odd) {
+  border-radius: 10px 0 0 10px;
+}
+
+@media only screen and (max-width: 1050px) {
+  .divParagrapheOut,
+  .divForumOut,
+  div.divForum {
+    animation: none;
+  }
+
+  div.divParagraphe,
+  .divParagrapheOut {
+    width: 360px;
+    padding: 0;
+    margin-left: 48%;
+  }
+
+  form.formulaire {
+    height: 272px;
+    width: 90%;
+  }
+
+  div.divForum,
+  .divForumOut {
+    width: 330px;
+    margin-left: 48%;
+  }
+}
+@media only screen and (max-width: 710px) {
+  div.divParagraphe,
+  div.divForum,
+  .divParagrapheOut,
+  .divForumOut {
+    width: 80%;
+    margin: 50px auto;
+  }
+
+  input.button1 {
+    font-size: 0.6em;
+  }
+}
+
+@media only screen and (max-height: 730px) {
+  form.formulaire,
+  div.divParagraphe,
+  .divParagrapheOut {
+    height: 30vh;
+    min-height: 200px;
+  }
+}

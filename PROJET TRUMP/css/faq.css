@@ -1,0 +1,74 @@
+div.divParagraphe {
+  width: 100%;
+  height: 130%;
+  padding: 20px 30px;
+  border-right: 0;
+}
+
+.divParagrapheOut {
+  text-align: center;
+  overflow: auto;
+  border: 4px solid white;
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  font-family: "Courier New", Courier, monospace;
+  background-color: rgba(20, 20, 23, 0.85);
+  padding: 30px;
+  width: 100%;
+  height: 130%;
+  padding: 20px 30px;
+  border-right: 0;
+  animation-name: gridAnimOut;
+  animation-duration: 700ms;
+  animation-fill-mode: forwards;
+}
+
+.divParagraphe::-webkit-scrollbar-thumb,
+.divParagrapheOut::-webkit-scrollbar-thumb {
+  background-image: url("images/usaIcon.png");
+  background-size: cover;
+  border: 3px solid white;
+  outline: 1px solid black;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 300px;
+}
+
+.divParagraphe::-webkit-scrollbar,
+.divParagrapheOut::-webkit-scrollbar {
+  width: 50px;
+}
+
+.divParagraphe::-webkit-scrollbar-track,
+.divParagrapheOut::-webkit-scrollbar-track {
+  background-color: white;
+  border-radius: 0 10px 10px 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-size: 2em;
+  text-align: center;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 1050px) {
+  div.divParagraphe,
+  .divParagrapheOut {
+    width: 35%;
+  }
+
+  .divParagrapheOut {
+    animation: none;
+  }
+}
+@media only screen and (max-width: 710px) {
+  div.divParagraphe,
+  .divParagrapheOut {
+    width: 80%;
+    margin: 50px auto;
+  }
+}

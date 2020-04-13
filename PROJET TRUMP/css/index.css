@@ -1,0 +1,811 @@
+div.grid {
+  grid-template-columns: 4fr 4fr 8fr;
+  grid-gap: 2vw;
+  margin-right: 25px;
+}
+
+div.grid > div:nth-child(5) {
+  grid-row: 2/4;
+  grid-column: 2/4;
+}
+
+div.divJoueur,
+div.divTableau {
+  color: white;
+  background-color: rgba(20, 20, 23, 0.85);
+  border: 4px solid white;
+  border-radius: 15px;
+  animation-name: gridAnim;
+  animation-duration: 0.7s;
+}
+
+div.divJoueur {
+  padding: 10px 10px 0 10px;
+}
+
+.divJoueurOut {
+  color: white;
+  background-color: rgba(20, 20, 23, 0.85);
+  border: 4px solid white;
+  border-radius: 15px;
+  padding: 10px 10px 0 10px;
+  animation-name: gridAnimOut;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+}
+
+.divTableau {
+  padding: 5px;
+}
+
+.divTableauOut {
+  color: white;
+  background-color: rgba(20, 20, 23, 0.85);
+  border: 4px solid white;
+  border-radius: 15px;
+  animation-name: gridAnimOut;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+}
+
+div.statsJoueur {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+  height: 45%;
+  text-align: center;
+}
+
+div.statsJoueur > p:nth-child(even) {
+  text-align: right;
+}
+
+div.statsJoueur > p:nth-child(odd) {
+  text-align: left;
+}
+
+div.statsJoueur > p {
+  padding: 0;
+  margin: 0;
+}
+
+div.buttonJoueur {
+  display: flex;
+  justify-content: space-around;
+}
+
+div.buttonJoueur > button {
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 1);
+  background: #002868;
+  transition: 150ms;
+  border-radius: 10px;
+  border: 2px solid white;
+  color: white;
+  font-family: "courier new";
+  font-weight: bold;
+  font-size: 0.9em;
+  width: 30%;
+  margin: auto;
+  padding: 7px;
+}
+div.buttonJoueur > button:hover {
+  background: white;
+  color: black;
+  box-shadow: 0 0 18px rgba(255, 255, 255);
+}
+
+div.divRessource,
+div.divInventaire {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1.5em;
+}
+
+div.divRessource {
+  margin-left: 7vw;
+  animation-name: gridAnim;
+  animation-duration: 0.6s;
+}
+
+.divRessourceOut {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1.5em;
+  margin-left: 7vw;
+  animation-name: gridAnimOut;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+}
+
+div.divInventaire {
+  position: fixed;
+  bottom: 60px;
+  left: 40px;
+  width: 270px;
+  height: 280px;
+  animation-name: nav;
+  animation-duration: 0.5s;
+}
+
+.divInventaireOut {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1.5em;
+  position: fixed;
+  bottom: 60px;
+  left: 40px;
+  width: 270px;
+  height: 280px;
+  animation-name: navOut;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  text-align: center;
+  overflow: auto;
+  border: 4px solid white;
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  font-family: "Courier New", Courier, monospace;
+  background-color: rgba(20, 20, 23, 0.85);
+}
+
+div.divInventaire > img,
+div.divInventaireOut > img {
+  margin: auto;
+}
+
+table.tableau {
+  width: 100%;
+  height: 60%;
+  text-align: right;
+  border: 1px solid white;
+  border-radius: 15px 15px 0 0;
+}
+
+table.tableau > tbody {
+  font-size: 0.6em;
+}
+
+table.tableau tr:nth-child(even) {
+  background-color: white;
+  color: black;
+}
+
+th {
+  background-color: white;
+  color: black;
+}
+
+th:first-child {
+  border-radius: 10px 0 0 0;
+}
+
+th:last-child {
+  border-radius: 0 10px 0 0;
+  padding-right: 6px;
+}
+
+div.tableauButton {
+  display: flex;
+  justify-content: space-around;
+  height: 40%;
+}
+
+div.tableauButton > div > p {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+button.buttonPlay {
+  margin-left: -10px;
+}
+
+button.buttonPlay,
+button.buttonPause {
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 1);
+  background-color: #002868;
+  height: 30px;
+  width: 70px;
+  border: 2px solid white;
+  transition: 150ms;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 200ms;
+}
+
+button.buttonPlay:hover,
+button.buttonPause:hover {
+  background: white;
+  color: black;
+  box-shadow: 0 0 18px rgba(255, 255, 255);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+button.buttonPlay {
+  border-radius: 10px 0 0 10px;
+  background-image: url("images/playImgWhite.png");
+}
+
+button.buttonPlay:hover {
+  background-image: url("images/playImg.png");
+}
+
+button.buttonPause {
+  border-radius: 0 10px 10px 0;
+  background-image: url("images/pauseImgWhite.png");
+}
+
+button.buttonPause:hover {
+  background-image: url("images/pauseImg.png");
+}
+
+img.imgTableau {
+  border: 2px solid white;
+  width: 35px;
+  height: 35px;
+  display: block;
+  margin: auto;
+}
+
+div.divImgTableau {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.divButtonWar {
+  height: 100%;
+  width: 30%;
+  margin-right: -20px;
+}
+
+div.divButtonWar > button {
+  font-family: "courier new";
+  height: 80%;
+  width: 90%;
+  margin-top: 10px;
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 1);
+  background-color: #9e0000;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.3vw;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0);
+}
+
+div.divButtonWar > button:hover {
+  color: black;
+  box-shadow: 0 0 18px rgba(255, 255, 255);
+  background-image: url("images/usaIcon.png");
+  text-shadow: 4px 4px 4px rgba(255, 255, 255);
+}
+
+div.divRessource > div,
+div.divRessourceOut > div {
+  height: 100%;
+  width: 70%;
+  margin-bottom: 6em;
+  border-radius: 30px;
+  padding: 0 20px;
+}
+
+div.ressource1 {
+  background-color: rgba(184, 115, 51, 0.6);
+}
+
+div.ressource1 > button {
+  background-color: rgba(184, 115, 51);
+}
+
+div.ressource1 > button:hover {
+  background-color: rgba(224, 155, 101);
+  box-shadow: 0 0 18px rgba(0, 0, 0);
+}
+
+div.ressource2 {
+  background-color: rgba(192, 192, 192, 0.6);
+}
+
+div.ressource2 > button {
+  background-color: rgba(192, 192, 192);
+}
+
+div.ressource2 > button:hover {
+  box-shadow: 0 0 18px rgba(0, 0, 0);
+  background-color: rgba(232, 232, 232);
+}
+
+div.ressource3 {
+  background-color: rgba(229, 193, 76, 0.6);
+}
+
+div.ressource3 > button {
+  background-color: rgba(229, 193, 76);
+}
+
+div.ressource3 > button:hover {
+  box-shadow: 0 0 18px rgba(0, 0, 0);
+  background-color: rgba(255, 233, 106);
+}
+
+div.ressource4 {
+  background-color: rgba(239, 255, 255, 0.6);
+}
+
+div.ressource4 > button {
+  background-color: rgba(239, 255, 255);
+}
+
+div.ressource4 > button:hover {
+  box-shadow: 0 0 18px rgba(0, 0, 0);
+  background-color: rgba(255, 255, 255);
+}
+
+div.statsRessource {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+div.statsRessource > p:nth-child(even) {
+  text-align: right;
+}
+
+p.titre {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+div.progress {
+  border-radius: 3px;
+  border: 1px solid black;
+  width: 80%;
+  height: 10%;
+  margin: 16px auto auto auto;
+}
+
+button.buttonRessource {
+  font-size: 1.2em;
+  font-family: "courier new";
+  border-radius: 15px;
+  border: 1px solid black;
+  width: 60%;
+  height: 45px;
+  margin: 20px auto -50px auto;
+  display: block;
+  font-weight: bold;
+}
+
+hr {
+  border: 1px solid black;
+}
+
+div.divImgJoueur {
+  display: flex;
+  margin-bottom: 2vh;
+}
+
+div.progressBar1,
+.bronzeBg {
+  background-color: rgba(184, 115, 51);
+}
+
+div.progressBar2,
+.silverBg {
+  background-color: rgba(102, 102, 102);
+}
+
+div.progressBar3,
+.goldBg {
+  background-color: rgba(209, 173, 56);
+}
+
+div.progressBar4,
+.platinumBg {
+  background-color: rgba(155, 155, 175);
+}
+
+div.progressBar1,
+div.progressBar2,
+div.progressBar3,
+div.progressBar4 {
+  animation-name: progres, progress-bar-stripes;
+  animation-duration: 3s, 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  position: relative;
+  height: 100%;
+
+  border-radius: 3px;
+  /* background-color: blue; */
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.35) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0.35) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 40px 40px;
+  /* animation: 2s linear 0s normal none infinite running progress-bar-stripes,
+    progres 1s; */
+}
+
+@keyframes progres {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+.divObjetShop {
+  display: flex;
+}
+
+.divObjetShop > p {
+  color: white;
+  margin: 15px 25px;
+  width: 70%;
+}
+
+.divObjetShop > img {
+  border: 1px solid white;
+  background-color: black;
+  border-radius: 50px;
+  height: 80%;
+  margin: auto;
+}
+
+.buttonBuyObjet {
+  letter-spacing: 0.2em;
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 1);
+  text-shadow: 1px 1px black;
+  font-size: 0.8em;
+  font-family: "Courier New", Courier, monospace;
+  padding: 15px;
+  margin: auto;
+  height: 30%;
+  width: 100px;
+  background-color: #002868;
+  color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+}
+
+.buttonBuyObjet:hover {
+  text-shadow: none;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 18px rgba(255, 255, 255);
+}
+
+.popupBg > div > hr {
+  border: 1px solid white;
+  width: 70%;
+}
+
+.positionBottom {
+  height: 400px;
+  overflow: auto;
+}
+
+.popupBg2 > div {
+  margin: 5em auto 0 auto;
+  max-width: 51%;
+}
+
+.statsPopupXp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.divXpRessource {
+  width: 105%;
+  display: flex;
+}
+
+.xpRes1 {
+  color: rgba(184, 115, 51);
+  border-right: 1px solid white;
+}
+
+.xpRes2 {
+  color: rgba(192, 192, 192);
+  border-right: 1px solid white;
+}
+
+.xpRes3 {
+  color: rgba(229, 193, 76);
+  border-right: 1px solid white;
+}
+
+.xpRes4 {
+  color: rgba(239, 255, 255);
+}
+
+.xpRes {
+  font-size: 0.8em;
+}
+
+.divPtsXp {
+  padding-left: 10px;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 1fr;
+  grid-gap: 1px 2px;
+  height: 300px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.gridBottom {
+  grid-gap: 2em;
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.gridBottom > div:nth-child(7),
+.gridBottom > div:last-child {
+  margin-bottom: 2em;
+}
+
+.gridBottom > div:nth-child(2),
+.gridBottom > div:first-child {
+  margin-top: 1em;
+}
+
+.plus-button {
+  border: 2px solid black;
+  font-size: 16px;
+  height: 2em;
+  width: 2em;
+  border-radius: 999px;
+  position: relative;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8);
+  transition: 200ms;
+}
+
+.plus-button:hover {
+  box-shadow: 0 0 40px rgba(255, 255, 255);
+  border: none;
+  background-color: rgba(255, 255, 255);
+}
+
+.plus-button:after,
+.plus-button:before {
+  content: "";
+  display: block;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.plus-button:before {
+  height: 1em;
+  width: 0.2em;
+}
+
+.plus-button:after {
+  height: 0.2em;
+  width: 1em;
+}
+
+.fontSizeXpCost {
+  font-size: 1.2em;
+}
+
+.xpTierBg {
+  background-color: white;
+  border-radius: 50px;
+  /* border: 1px solid black; */
+  box-shadow: 0 0 1px black;
+}
+
+@media only screen and (max-height: 750px) {
+  nav a {
+    font-size: 0.7em;
+    font-weight: 500;
+    padding: 4px;
+  }
+}
+
+@media only screen and (max-height: 850px) {
+  div.divInventaire,
+  .divInventaireOut {
+    grid-template-columns: auto auto auto auto;
+    height: 180px;
+  }
+}
+
+@media only screen and (max-height: 620px) {
+  html {
+    background-position-y: 50px;
+  }
+
+  .footer {
+    visibility: hidden;
+  }
+  div.brownBox,
+  div.header {
+    height: 86px;
+  }
+
+  img.home,
+  .imgOut {
+    width: 142px;
+    margin-left: 115px;
+  }
+
+  div.grid {
+    margin-top: 2em;
+    grid-auto-rows: 40vh;
+  }
+}
+
+@media only screen and (max-height: 520px) {
+  div.divInventaire,
+  .divInventaireOut {
+    height: 100px;
+    bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 1260px) {
+  div.grid {
+    display: grid;
+    grid-template-columns: 4fr 2fr 4fr;
+    grid-auto-rows: 200px;
+  }
+
+  div.divJoueur,
+  div.divTableau,
+  div.divRessource,
+  div.divInventaire,
+  .divJoueurOut,
+  .divTableauOut,
+  .divRessourceOut,
+  .divInventaireOut {
+    animation: none;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  nav,
+  img.home,
+  div.brownBox,
+  .navOut,
+  .imgOut {
+    position: relative;
+  }
+
+  img.home,
+  nav,
+  .imgOut,
+  .navOut {
+    margin: auto;
+    min-width: 260px;
+    animation: none;
+  }
+
+  footer {
+    visibility: hidden;
+  }
+
+  div.grid {
+    display: contents;
+  }
+
+  div.divInventaire,
+  .divInventaireOut {
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+
+  div.divBlack,
+  div.divJoueur,
+  div.divTableau,
+  div.divRessource,
+  div.divInventaire,
+  .divJoueurOut,
+  .divTableauOut,
+  .divRessourceOut,
+  .divInventaireOut {
+    width: 80%;
+    height: 210px;
+    margin: 2em auto;
+  }
+
+  div.divRessource,
+  .divRessourceOut {
+    display: block;
+  }
+
+  div.ressourceDiv,
+  div.ressource1,
+  div.ressource2,
+  div.ressource3,
+  div.ressource4 {
+    margin: 1em 0;
+  }
+
+  th {
+    font-size: 0.6em;
+  }
+  div.divRessource > div,
+  div.divRessourceOut > div {
+    padding-top: 1px;
+    height: 165%;
+    margin: auto;
+    margin-bottom: 2em;
+  }
+
+  .divObjetShop {
+    display: grid;
+    grid-auto-rows: 100px;
+  }
+
+  .divObjetShop > p {
+    width: auto;
+    margin-bottom: 10px;
+  }
+
+  .buttonBuyObjet {
+    padding: 7px;
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 940px) and (max-height: 620px) {
+  nav,
+  .navOut {
+    margin-top: 122px;
+  }
+}
+
+@media only screen and (min-height: 1200px) {
+  div.divInventaire,
+  .divInventaireOut {
+    bottom: 0;
+    top: 550px;
+  }
+}
+
+@media only screen and (max-height: 390px) {
+  div.grid {
+    margin-top: 0.5em;
+  }
+  img.home,
+  .imgOut {
+    width: 110px;
+  }
+}
+
+@media only screen and (max-width: 685px) {
+  .divObjetShop {
+    grid-auto-rows: 150px;
+  }
+}

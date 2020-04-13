@@ -1,0 +1,491 @@
+img.home {
+  display: block;
+  width: 269px;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  margin-right: 80%;
+  margin-left: 50px;
+  position: fixed;
+  animation-name: img;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes img {
+  from {
+    transform: translateX(-500px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  position: relative;
+  font-family: "courier new";
+}
+
+html {
+  background: url("images/backgroundImg.jpg") center center fixed;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position-y: 150px;
+  overflow-x: hidden;
+}
+
+button {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+body::-webkit-scrollbar-track-piece:start {
+  background-color: #bf0a30;
+  box-shadow: inset 0 0 50px black;
+}
+body::-webkit-scrollbar-track-piece:end {
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 1);
+  background-color: #002868;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: white;
+  outline: 1px solid black;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar {
+  width: 1.5em;
+}
+
+body::-webkit-scrollbar-corner {
+  background-image: url("images/usaIcon.png");
+  background-size: cover;
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 1);
+}
+
+nav {
+  width: 75%;
+  min-width: 269px;
+  max-width: 280px;
+  position: fixed;
+  margin-left: 40px;
+  margin-top: 0px;
+  font-family: "courier new";
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+  animation-name: nav;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes nav {
+  from {
+    transform: translateX(-500px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+nav a {
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 1);
+  background-color: #002868;
+  color: white;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  text-align: center;
+  border-left: 4px solid white;
+  border-right: 4px solid white;
+  border-top: 4px solid white;
+  transition: 0.5s;
+}
+
+nav a.nonActiveNav:hover {
+  background-color: white;
+  color: black;
+  text-shadow: 0px 0px;
+  transform: translateX(5px);
+  box-shadow: 0 0 18px rgba(255, 255, 255);
+  /* margin-left: 3px;
+  width: 89%; */
+}
+
+nav a:first-child {
+  border-radius: 15px 15px 0px 0px;
+}
+
+nav a:last-child {
+  border-radius: 0px 0px 15px 15px;
+  border-bottom: 4px solid white;
+}
+
+nav a.activeNav {
+  background-color: #bf0a30;
+  text-shadow: 1px 1px black;
+}
+
+div.brownBox {
+  height: 155px;
+  width: 100vw;
+  margin-bottom: 160px;
+  border-bottom: 1px solid black;
+  background-image: url("images/headerBackground.jpg");
+  background-size: cover;
+  position: fixed;
+  z-index: 100;
+}
+
+div.header {
+  height: 215px;
+}
+
+div.grid {
+  display: grid;
+  grid-template-columns: 4fr 12fr;
+  grid-gap: 2vw 15vw;
+  grid-auto-rows: 30vh;
+  animation-name: grid;
+  animation-duration: 1.5s;
+  margin-right: 10vw;
+}
+
+div.divParagraphe,
+div.msgDiv,
+div.playerNameDiv,
+div.divForum,
+div.divInventaire {
+  text-align: center;
+  overflow: auto;
+  border: 4px solid white;
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  font-family: "Courier New", Courier, monospace;
+  background-color: rgba(20, 20, 23, 0.85);
+}
+
+div.divParagraphe {
+  padding: 30px;
+  animation-name: gridAnim;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  height: 120%;
+}
+
+@keyframes gridAnim {
+  from {
+    transform: translateX(1000px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+div::-webkit-scrollbar {
+  width: 20px;
+}
+
+div::-webkit-scrollbar-thumb {
+  background-color: white;
+  outline: 1px solid black;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+footer {
+  background-image: url("images/headerBackground.jpg");
+  border-top: 1px solid black;
+  background-size: cover;
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
+  height: 25px;
+}
+
+td > img {
+  width: 10px;
+  margin: auto 4px;
+}
+
+.out {
+  height: 120%;
+  padding: 30px;
+  text-align: center;
+  overflow: auto;
+  border: 4px solid white;
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  font-family: "Courier New", Courier, monospace;
+  background-color: rgba(20, 20, 23, 0.85);
+  animation-name: gridAnimOut;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes gridAnimOut {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(2000px);
+  }
+}
+
+.navOut {
+  width: 75%;
+  min-width: 269px;
+  max-width: 280px;
+  position: fixed;
+  margin-left: 40px;
+  margin-top: 0px;
+  font-family: "courier new";
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+  animation-name: navOut;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes navOut {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-500px);
+  }
+}
+
+.imgOut {
+  display: block;
+  width: 269px;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  margin-right: 80%;
+  margin-left: 50px;
+  position: fixed;
+  animation-name: imgOut;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes imgOut {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-500px);
+  }
+}
+
+.popupBg,
+.popupBg2 {
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  height: 100%;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9000;
+}
+.popupBg .helper,
+.popupBg2 .helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.popupBg > div,
+.popupBg2 > div {
+  margin: auto;
+  overscroll-behavior: contain;
+  background-color: #fff;
+  background-color: rgba(20, 20, 23);
+  /* box-shadow: 10px 10px 60px #555; */
+  box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
+  animation: pulse 6s infinite linear;
+  display: inline-block;
+  max-width: 551px;
+  min-height: 100px;
+  max-height: 75%;
+  vertical-align: middle;
+  width: 60%;
+  /* position: relative; */
+  border-radius: 8px;
+  padding: 15px 50px 30px 50px;
+  overflow-y: scroll;
+  /* overflow-y: auto; */
+  /* animation-name: boxShadow; */
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 10px 10px 60px #002868;
+  }
+  33% {
+    -webkit-box-shadow: 10px 10px 60px white;
+  }
+  66% {
+    -webkit-box-shadow: 10px 10px 60px red;
+  }
+  100% {
+    -webkit-box-shadow: 10px 10px 60px #002868;
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 10px 10px 60px #002868;
+    box-shadow: 10px 10px 60px #002868;
+  }
+  33% {
+    -moz-box-shadow: 10px 10px 60px white;
+    box-shadow: 10px 10px 60px white;
+  }
+  66% {
+    -moz-box-shadow: 10px 10px 60px red;
+    box-shadow: 10px 10px 60px red;
+  }
+  100% {
+    -moz-box-shadow: 10px 10px 60px #002868;
+    box-shadow: 10px 10px 60px #002868;
+  }
+}
+
+/* @keyframes boxShadow {
+  from {
+    box-shadow: 10px 10px 60px #555;
+  }
+  to {
+    box-shadow: 10px 10px 60px blue;
+  }
+} */
+
+.popupCloseButton {
+  color: white;
+  background-color: #002868;
+  border: 3px solid #ccc;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: arial;
+  font-weight: bold;
+  /* position: absolute; */
+  position: fixed;
+  font-size: 25px;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  z-index: 10000;
+  margin-left: -60px;
+  margin-top: -25px;
+}
+.popupCloseButton:hover {
+  background-color: #bf0a30;
+}
+
+@media only screen and (max-width: 1050px) {
+  div.grid {
+    width: 100%;
+    display: contents;
+    min-height: 100vh;
+  }
+
+  html {
+    background-size: auto;
+    overflow-x: hidden;
+  }
+
+  div.divParagraphe,
+  .divParagrapheOut,
+  .out,
+  .loginOut {
+    margin-left: 50%;
+    margin-right: 5vw;
+    max-height: 55vh;
+    animation: none;
+  }
+
+  nav,
+  img.home {
+    animation: none;
+  }
+
+  .out,
+  .navOut,
+  .imgOut {
+    animation: none;
+  }
+}
+
+@media only screen and (max-width: 710px) {
+  nav,
+  img.home,
+  div.brownBox,
+  .navOut,
+  .imgOut {
+    position: relative;
+  }
+
+  img.home,
+  nav,
+  .imgOut,
+  .navOut {
+    margin: auto;
+    min-width: 260px;
+    animation: none;
+  }
+
+  footer {
+    visibility: hidden;
+  }
+
+  div.divParagraphe,
+  .out,
+  .loginOut,
+  .divParagrapheOut {
+    margin: 35px;
+  }
+}
+
+@media only screen and (max-height: 675px) {
+  nav a {
+    font-size: 0.7em;
+    font-weight: 500;
+    padding: 4px;
+  }
+}
+
+@media only screen and (max-height: 425px) and (min-width: 710px) {
+  html {
+    background-position-y: 50px;
+  }
+
+  .footer {
+    visibility: hidden;
+  }
+  div.brownBox,
+  div.header {
+    height: 86px;
+  }
+
+  img.home,
+  .imgOut {
+    width: 100px;
+    margin-left: 115px;
+  }
+}
